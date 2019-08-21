@@ -1,0 +1,1 @@
+export const getNamePage = state => state.namePage;

@@ -1,0 +1,12 @@
+version: '3'
+services:
+  front:
+    container_name: poll_front
+    restart: always
+    build: .
+    ports:
+     - "8080:80"
+    volumes:
+     - ./dist:/usr/share/nginx/html:rw
+volumes:
+  dist:
