@@ -22,7 +22,7 @@
             </div>
           </v-card-text>
           <v-card-actions>
-            <v-btn v-if="isAdmin" text flat color="primary">Crear encuesta</v-btn>
+            <v-btn v-if="isAdmin" text @click="goToCreatePoll" flat color="primary">Crear encuesta</v-btn>
           </v-card-actions>
         </v-card>
       </div>
@@ -70,6 +70,9 @@ export default {
       } else {
         this.isMobile = false;
       }
+    },
+    goToCreatePoll () {
+      this.$router.push('/list-polls');
     }
   }
 };
